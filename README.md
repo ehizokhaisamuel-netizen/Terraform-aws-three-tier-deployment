@@ -73,7 +73,7 @@ Full diagram: [`docs/architecture-diagram.png`](docs/architecture-diagram.png.pn
 | Load balancing | 2× Application Load Balancer (1 internet-facing, 1 internal) |
 | Frontend | Next.js + Nginx |
 | Backend | Node.js + Express |
-| Database | MySQL on EC2 (see [known limitation](#-known-limitation--database-tier)) |
+| Database | MySQL on EC2 (see [known limitation](known-limitation--database-tier)) |
 
 ---
 
@@ -210,7 +210,7 @@ The bootstrap S3 bucket has `prevent_destroy` set, so it survives even a full `t
 
 ---
 
-## ⚠️ Known Limitation — Database Tier
+## Known Limitation — Database Tier
 
 The `database` module, as written, creates **one independent MySQL EC2 instance per Availability Zone with no replication between them**. It matches the architecture diagram visually, but it is **not** a working multi-AZ database — it's three separate, unsynced databases.
 
