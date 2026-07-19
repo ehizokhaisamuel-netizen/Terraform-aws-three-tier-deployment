@@ -73,7 +73,7 @@ Full diagram: [`docs/architecture-diagram.png`](docs/architecture-diagram.png.pn
 | Load balancing | 2× Application Load Balancer (1 internet-facing, 1 internal) |
 | Frontend | Next.js + Nginx |
 | Backend | Node.js + Express |
-| Database | MySQL on EC2 (see [known limitation](known-limitation--database-tier)) |
+| Database | MySQL on EC2 (see [known limitation](#known-limitation--database-tier)) |
 
 ---
 
