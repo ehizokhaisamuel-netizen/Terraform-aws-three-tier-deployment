@@ -32,9 +32,9 @@ resource "aws_autoscaling_group" "frontend" {
   name                = "${var.project_name}-frontend-asg"
   vpc_zone_identifier = values(var.web_subnet_ids)
   target_group_arns   = [var.frontend_target_group_arn]
-  min_size            = 3
-  max_size            = 6
-  desired_capacity    = 3
+  min_size            = 1
+  max_size            = 2
+  desired_capacity    = 1
   health_check_type   = "ELB"
 
   launch_template {
@@ -72,9 +72,9 @@ resource "aws_autoscaling_group" "backend" {
   name                = "${var.project_name}-backend-asg"
   vpc_zone_identifier = values(var.app_subnet_ids)
   target_group_arns   = [var.backend_target_group_arn]
-  min_size            = 3
-  max_size            = 6
-  desired_capacity    = 3
+  min_size            = 1
+  max_size            = 2
+  desired_capacity    = 1
   health_check_type   = "ELB"
 
   launch_template {
