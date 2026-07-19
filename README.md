@@ -101,6 +101,9 @@ terraform-three-tier-aws/
 ├── docs/
 │   └── architecture-diagram.png
 │
+├── screenshots/
+│   └── .png
+│
 ├── .gitignore
 └── README.md
 ```
