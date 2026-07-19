@@ -58,7 +58,7 @@ This started as a manually-deployed version of the same architecture (built and 
 
 A NAT Gateway (single, in AZ-1a's public subnet) gives private-subnet resources outbound internet access — for package installs and updates — without ever being reachable *from* the internet.
 
-Full diagram: [`docs/architecture-diagram.png`](docs/architecture-diagram.png)
+Full diagram: [`docs/architecture-diagram.png`](docs/architecture-diagram.png.png)
 
 ---
 
