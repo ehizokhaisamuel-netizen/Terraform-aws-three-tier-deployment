@@ -1,37 +1,12 @@
-# Terraform working directory
-.terraform/
-**/.terraform/*
-
-# Terraform state
+# Terraform
+**/.terraform/
 *.tfstate
-*.tfstate.*
-
-# Variable files (may contain secrets)
+*.tfstate.backup
 *.tfvars
-*.tfvars.json
-
-# Terraform plan files
-*.tfplan
-
-# Crash logs
+!*.tfvars.example
+.terraform.lock.hcl
 crash.log
 
-# Override files
-override.tf
-override.tf.json
-*_override.tf
-*_override.tf.json
-
-# Terraform CLI config
-.terraformrc
-terraform.rc
-
-# IDE files
-.vscode/
-.idea/
-
-# macOS
-.DS_Store
-
-
-
+# Secrets
+*.pem
+*.key
