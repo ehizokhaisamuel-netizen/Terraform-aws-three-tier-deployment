@@ -18,7 +18,7 @@ This repository automates the deployment of a three-tier AWS architecture using 
 
 Everything is spread across **3 Availability Zones** for redundancy, with strict security-group chaining so each tier only ever accepts traffic from the tier directly in front of it — never directly from the internet, and never skipping a layer.
 
-This started as a manually-deployed version of the same architecture (built and debugged by hand — see [Manual Build Origins](#manual-build-origins)) and was rebuilt from scratch as fully automated, modular Terraform to eliminate repetitive manual setup and make the whole environment reproducible with a handful of commands.
+This started as a manually-deployed version of the same architecture (built and debugged by hand) and was rebuilt from scratch as fully automated, modular Terraform to eliminate repetitive manual setup and make the whole environment reproducible with a handful of commands.
 
 ---
 
@@ -81,9 +81,6 @@ Full diagram: [`docs/architecture-diagram.png`](docs/architecture-diagram.png)
 
 ```
 terraform-three-tier-aws/
-│
-├── bootstrap/                  # One-time remote state setup — run first, alone
-│   └── main.tf                 # Creates the S3 bucket + DynamoDB lock table
 │
 ├── modules/                    # Reusable, environment-agnostic infrastructure logic
 │   ├── networking/             # VPC, 4-tier subnets × 3 AZs, IGW, NAT, route tables
@@ -274,8 +271,8 @@ This automated version follows an earlier, manually-deployed build of the same a
 
 ## 👤 Author
 
-**[Your Name]** — DevOps/Cloud Engineer
-[LinkedIn](https://linkedin.com/in/your-profile) · [GitHub](https://github.com/your-username)
+**[Samuel Ehizokhai]** — DevOps/Cloud Engineer
+[LinkedIn](https://linkedin.com/in/samuel-ehizokhai) · [GitHub](https://github.com/ehizokhaisamuel-netizen)
 
 ---
 
